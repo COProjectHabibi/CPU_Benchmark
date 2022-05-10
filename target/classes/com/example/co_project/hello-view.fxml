@@ -5,18 +5,21 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: 000000;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co_project.ChangePannel">
    <children>
-      <ImageView fitHeight="298.0" fitWidth="365.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="500.0" fitWidth="422.0" layoutX="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Pisica_test.jpg" />
+            <Image url="@Starting_pannel.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="49.0" layoutY="98.0" text="Hello Everyone!">
+      <Label layoutX="8.0" layoutY="140.0" text="Hello, lets play!">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="welcome_button" layoutX="63.0" layoutY="149.0" mnemonicParsing="false" text="START!" />
+      <Button fx:id="welcome_button" layoutX="14.0" layoutY="231.0" mnemonicParsing="false" onAction="#changePannel" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: teal;" text="START!!!!">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
    </children>
 </Pane>
