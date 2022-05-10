@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co_project.ChangePannel">
    <children>
-      <Button fx:id="backFloating" layoutX="271.0" layoutY="43.0" mnemonicParsing="false" onAction="#changePannel" text="Back" />
+      <ImageView fitHeight="500.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@Floating_point.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="backFloating" layoutX="545.0" layoutY="14.0" mnemonicParsing="false" onAction="#changePannel" text="Back" />
+      <TextField layoutX="24.0" layoutY="73.0" />
+      <TextField layoutX="24.0" layoutY="158.0" />
+      <TextField layoutX="24.0" layoutY="238.0" />
+      <TextField layoutX="24.0" layoutY="326.0" />
+      <Button layoutX="72.0" layoutY="400.0" mnemonicParsing="false" text="Start">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="32.0" layoutY="39.0" style="-fx-background-color: grey;" text="First Number" textFill="#f8f8f8">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="119.0" style="-fx-background-color: grey;" text="Second Number" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="207.0" style="-fx-background-color: grey;" text="Sum" textFill="#fff6f6">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="291.0" style="-fx-background-color: grey;" text="Score" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

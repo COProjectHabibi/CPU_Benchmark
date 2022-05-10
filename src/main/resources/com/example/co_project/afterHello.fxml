@@ -15,7 +15,7 @@
       <Button fx:id="caching" layoutX="466.0" layoutY="360.0" mnemonicParsing="false" onAction="#changeCaching" text="Caching" />
       <Button fx:id="floating" layoutX="234.0" layoutY="360.0" mnemonicParsing="false" onAction="#changeFloating" text="Floating point aritmathics" />
       <Button fx:id="digits" layoutX="65.0" layoutY="360.0" mnemonicParsing="false" onAction="#changeDigits" text="Digits of Pi" />
-      <Label alignment="CENTER" layoutX="172.0" layoutY="-6.0" prefHeight="51.0" prefWidth="242.0" text="Choose a test">
+      <Label alignment="CENTER" layoutX="118.0" prefHeight="53.0" prefWidth="348.0" text="Choose your cat!">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
