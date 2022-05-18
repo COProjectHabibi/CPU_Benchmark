@@ -3,6 +3,7 @@ package com.example.co_project;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
@@ -22,6 +23,10 @@ public class ChangePannel {
     private Button floating;
     @FXML
     private Button caching;
+    @FXML
+    private Button digitsstart;
+    @FXML
+    private TextField digitstime;
 
     public void changePannel(ActionEvent event) throws IOException{
         Pannel();
@@ -62,5 +67,10 @@ public class ChangePannel {
 
         m.changeScene("afterCaching.fxml");
     }
+
+    public void printValue(ActionEvent event) throws IOException{
+        digitstime.setText(DigitsOfPi.printValueOfPi() + " Miliseconds");
+    }
+
 
 }
