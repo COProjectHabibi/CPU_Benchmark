@@ -27,6 +27,8 @@ public class ChangePannel {
     private Button digitsstart;
     @FXML
     private TextField digitstime;
+    @FXML
+    private TextField digitsscore;
 
     public void changePannel(ActionEvent event) throws IOException{
         Pannel();
@@ -70,6 +72,7 @@ public class ChangePannel {
 
     public void printValue(ActionEvent event) throws IOException{
         digitstime.setText(DigitsOfPi.printValueOfPi() + " Miliseconds");
+        digitsscore.setText((DigitsOfPi.printScore()));
     }
 
 
