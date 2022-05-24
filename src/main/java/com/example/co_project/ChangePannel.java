@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ChangePannel {
 
@@ -29,6 +30,10 @@ public class ChangePannel {
     private TextField digitstime;
     @FXML
     private TextField digitsscore;
+    @FXML
+    private TextField mainTextField;
+    @FXML
+    private TextField digitsvalue;
 
     public void changePannel(ActionEvent event) throws IOException{
         Pannel();
@@ -70,10 +75,32 @@ public class ChangePannel {
         m.changeScene("afterCaching.fxml");
     }
 
-    public void printValue(ActionEvent event) throws IOException{
-        digitstime.setText(DigitsOfPi.printValueOfPi() + " Miliseconds");
-        digitsscore.setText((DigitsOfPi.printScore()));
+    public void printValue(@org.jetbrains.annotations.NotNull ActionEvent actionEvent) throws IOException {
+        digitsscore.setVisible(true);
+        digitsvalue.setVisible(true);
+        int nb_of_digits = Integer.parseInt(mainTextField.getText());
+        PiSpigot spigot = new PiSpigot();
+        spigot.digits_requested = nb_of_digits;
+        ArrayList<Integer> score = new ArrayList<Integer>();
+        for (int i = 0; i <= 10; i++) {
+            long start = System.nanoTime();
+            spigot.piString = "";
+            spigot.run();
+            long end = System.nanoTime();
+            long elapsedTime = (end - start) / 10000;
+            digitstime.setText(String.valueOf(elapsedTime));
+            double individualScore = nb_of_digits / Math.sqrt(elapsedTime);
+            System.out.println(individualScore);
+            score.add(i, (int) individualScore);
+        }
+        double sum = 0;
+        for (double individualScore : score){
+            sum += individualScore;
+        }
+        double finalScore = sum / 10;
+        score.clear();
+        digitsscore.setText(String.valueOf(finalScore));
+        digitsvalue.setText(spigot.piString);
     }
-
 
 }
