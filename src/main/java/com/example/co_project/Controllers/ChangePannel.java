@@ -43,6 +43,8 @@ public class ChangePannel {
     private TextField mainTextField;
     @FXML
     private TextField digitsvalue;
+    @FXML
+    private Label wrongCreate;
 
     public void changePannel(ActionEvent event) throws IOException{
         Pannel();
@@ -85,7 +87,7 @@ public class ChangePannel {
     }
 
     public void printValue(@NotNull ActionEvent actionEvent) throws IOException {
-
+        checkSpigot();
         digitsscore.setVisible(true);
         digitsvalue.setVisible(true);
         int nb_of_digits = Integer.parseInt(mainTextField.getText());
@@ -112,6 +114,17 @@ public class ChangePannel {
         digitsscore.setText(String.valueOf(finalScore));
         digitsvalue.setText(spigot.piString);
 
+    }
+
+    private void checkSpigot() throws IOException {
+        String str= ((mainTextField.getText()));
+        wrongCreate.setVisible(true);
+        boolean result = str.matches("[0-9]+");
+        if (mainTextField.getText().isEmpty()) {
+            wrongCreate.setText("Please fill in the number in workload field");
+        } else if (!result) {
+            wrongCreate.setText("Only use digits");
+        }else wrongCreate.setVisible(false);
     }
 
 

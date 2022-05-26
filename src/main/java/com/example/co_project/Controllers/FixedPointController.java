@@ -46,6 +46,7 @@ public class FixedPointController implements Initializable{
     private TextField workloadTextField;
     @FXML
     private Label wrongCreate;
+
     private String [] opt = {"0","1","2"};
 
     @Override
@@ -75,6 +76,7 @@ public class FixedPointController implements Initializable{
 
 
     public void printValueFixed(@NotNull ActionEvent actionEvent) throws IOException {
+        checkFixedPoint();
         setWorkload(Integer.parseInt(workloadTextField.getText()));
         setOption(Integer.parseInt((optionsChoiceBox.getValue())));
 
@@ -111,8 +113,18 @@ public class FixedPointController implements Initializable{
         System.out.println(workloadTextField.getText());
 
          */
-
-
+    }
+    private void checkFixedPoint()throws IOException {
+        String str= ((workloadTextField.getText()));
+        wrongCreate.setVisible(true);
+        boolean result = str.matches("[0-9]+");
+        if (workloadTextField.getText().isEmpty()) {
+            wrongCreate.setText("Please fill in the number in workload field");
+        } else if (optionsChoiceBox.getValue() == null) {
+            wrongCreate.setText("Please fill in the options field");
+        } else if (!result) {
+            wrongCreate.setText("Only use digits");
+        }else wrongCreate.setVisible(false);
     }
 
 

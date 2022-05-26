@@ -11,6 +11,7 @@ import com.example.co_project.timing.Timer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -19,6 +20,9 @@ import static com.example.co_project.testbanch.TestCPUFixedVsFloatingPoint.*;
 import static com.example.co_project.testbanch.TestCPUFixedVsFloatingPoint.time;
 
 public class BigDecimalController {
+
+    @FXML
+    private Label wrongCreate;
 
     @FXML
     private Button backCaching;
@@ -48,8 +52,9 @@ public class BigDecimalController {
         m.changeScene("afterHello.fxml");
     }
 
-    public void printBigDecimal(ActionEvent actionEvent) {
+    public void printBigDecimal(ActionEvent actionEvent) throws IOException {
         //setWorkload(Integer.parseInt(nrDigitsBigDecimal.getText()));
+        checkBigDecimal();
 
         System.out.println(Integer.parseInt(nrDigitsBigDecimal.getText()));
         ITimer timer = new Timer();
@@ -89,7 +94,17 @@ public class BigDecimalController {
         log.close();
         bench.clean();
 
+    }
 
+    private void checkBigDecimal()throws IOException {
+        String str= ((nrDigitsBigDecimal.getText()));
+        wrongCreate.setVisible(true);
+        boolean result = str.matches("[0-9]+");
+        if (nrDigitsBigDecimal.getText().isEmpty()) {
+            wrongCreate.setText("Please fill in the number in workload field");
+        } else if (!result) {
+            wrongCreate.setText("Only use digits");
+        }else wrongCreate.setVisible(false);
     }
 
 }
