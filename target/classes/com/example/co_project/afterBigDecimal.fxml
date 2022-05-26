@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co_project.Controllers.BigDecimalController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@Caching.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="backCaching" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#changePannel" text="Back" />
+      <TextField fx:id="resultBigDecimal" layoutX="418.0" layoutY="181.0" />
+      <TextField fx:id="timeBigDecimal" layoutX="418.0" layoutY="278.0" />
+      <Button fx:id="startBigDecimal" layoutX="468.0" layoutY="425.0" mnemonicParsing="false" onAction="#printBigDecimal" text="Start">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="421.0" layoutY="131.0" style="-fx-background-color: green;" text="Result" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="417.0" layoutY="233.0" style="-fx-background-color: green;" text="Time" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nrDigitsBigDecimal" layoutX="418.0" layoutY="89.0" />
+      <Label layoutX="417.0" layoutY="46.0" style="-fx-background-color: green;" text="Nr. of digits" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="scoreBigDecimal" layoutX="418.0" layoutY="365.0" />
+      <Label layoutX="417.0" layoutY="320.0" style="-fx-background-color: green;" text="Score" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

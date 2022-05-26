@@ -71,17 +71,17 @@ public class ChangePannel {
     private void Floating() throws IOException {
         Main m = new Main();
 
-        m.changeScene("afterFloating.fxml");
+        m.changeScene("afterFixed.fxml");
     }
 
-    public void changeCaching(ActionEvent event) throws IOException{
-        Caching();
+    public void changeBigDecimal(ActionEvent event) throws IOException{
+        BigDecimal();
     }
 
-    private void Caching() throws IOException {
+    private void BigDecimal() throws IOException {
         Main m = new Main();
 
-        m.changeScene("afterCaching.fxml");
+        m.changeScene("afterBigDecimal.fxml");
     }
 
     public void printValue(@NotNull ActionEvent actionEvent) throws IOException {

@@ -25,8 +25,9 @@ public interface ITimer {
 	
 	/**
 	 * Resumes the paused timer. <br>	 
-	 * If timer is not paused it starts it.	
-	 */
-	public void resume();
+	 * If timer is not paused it starts it.
+     * @return
+     */
+	public double resume();
 
 }

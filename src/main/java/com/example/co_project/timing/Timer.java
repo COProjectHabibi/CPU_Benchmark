@@ -39,8 +39,9 @@ public class Timer implements ITimer {
 	}
 
 	@Override
-	public void resume() {
+	public double resume() {
 		state = TimerState.Running;
 		elapsed = System.nanoTime();
-	}
+        return 0;
+    }
 }

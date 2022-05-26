@@ -70,7 +70,7 @@ public class FixedPointController implements Initializable{
     private void Floating() throws IOException {
         Main m = new Main();
 
-        m.changeScene("afterFloating.fxml");
+        m.changeScene("afterFixed.fxml");
     }
 
 
@@ -104,10 +104,13 @@ public class FixedPointController implements Initializable{
         //bench.clean();
         log.close();
 
-        timeTextField.setText(String.valueOf(getTime()));
+        timeTextField.setText(String.valueOf(getTime() + " " + timeUnit));
         scoreTextField.setText(String.valueOf(getMOPS()));
+        /*
         System.out.println(optionsChoiceBox.getValue());
         System.out.println(workloadTextField.getText());
+
+         */
 
 
     }
