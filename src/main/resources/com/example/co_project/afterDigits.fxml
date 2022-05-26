@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.co_project.Controllers.ChangePannel">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@Digits_of_pi.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="backDigits" layoutX="545.0" layoutY="14.0" mnemonicParsing="false" onAction="#changePannel" text="Back" />
+      <Button fx:id="digitsstart" layoutX="105.0" layoutY="428.0" mnemonicParsing="false" onAction="#printValue" text="Start!">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <TextField fx:id="digitstime" editable="false" layoutX="105.0" layoutY="278.0" />
+      <TextField fx:id="digitsscore" editable="false" layoutX="105.0" layoutY="369.0" />
+      <Label alignment="CENTER" layoutX="20.0" layoutY="276.0" prefHeight="30.0" prefWidth="53.0" style="-fx-background-color: beige;" text="Time" />
+      <Label alignment="CENTER" layoutX="20.0" layoutY="367.0" prefHeight="30.0" prefWidth="53.0" style="-fx-background-color: beige;" text="Score" />
+      <Label alignment="CENTER" layoutX="20.0" layoutY="182.0" prefHeight="30.0" prefWidth="53.0" style="-fx-background-color: beige;" text="Result" />
+      <Label alignment="CENTER" layoutX="10.0" layoutY="86.0" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: beige;" text="Nb of digits" />
+      <TextField fx:id="digitsvalue" layoutX="105.0" layoutY="184.0" />
+      <TextField fx:id="mainTextField" layoutX="105.0" layoutY="88.0" />
+   </children>
+</Pane>

@@ -1,0 +1,13 @@
+Run 0 finished in:  258.651799
+Run 1 finished in:  503.781199
+Run 2 finished in:  748.367199
+Run 3 finished in:  995.719499
+Run 4 finished in:  1248.930199
+Run 5 finished in:  1497.513399
+Run 6 finished in:  1737.5915
+Run 7 finished in:  1973.5309
+Run 8 finished in:  2213.7404
+Run 9 finished in:  2465.8336
+Run 10 finished in:  2712.2626
+Run 11 finished in:  2973.946799
+Finished in  2973.946799
